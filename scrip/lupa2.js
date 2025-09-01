@@ -1,7 +1,7 @@
 // =======================
 // Barra de búsqueda
 // =======================
-const input = document.getElementById("inputSearch");
+const input = document.getElementById("inputSearch-dos");
 const btnSearch = document.querySelector("#container .btn"); // <- botón lupa
 
 // Diccionario de palabras clave y rutas
@@ -69,4 +69,5 @@ input.addEventListener("keypress", function (e) {
 // Click en la lupa
 if (btnSearch) {
     btnSearch.addEventListener("click", buscarProducto);
+
 }
