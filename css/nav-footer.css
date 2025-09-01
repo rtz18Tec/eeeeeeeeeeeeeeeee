@@ -1,0 +1,550 @@
+:root {
+    --marquee-height: 40px;
+    /* Approximate height of the marquee */
+    --nav-height: 80px;
+    /* Approximate height of the nav bar */
+    --header-total-height: calc(var(--marquee-height) + var(--nav-height));
+}
+
+@import url('https://fonts.gogleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    padding-top: var(--header-total-height);
+}
+
+/* Botones del menú */
+.menu-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Botón REGÍSTRATE más llamativo */
+.menu-btn.register {
+    background: linear-gradient(135deg, #ff7b00, #ffbb00);
+    font-weight: bold;
+}
+
+.menu-btn.register:hover {
+    background: linear-gradient(135deg, #ff9500, #ffc400);
+}
+
+/* Fondo oscuro */
+#modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+.modal label {
+    display: block;
+    margin-top: 10px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal button {
+    margin-top: 15px;
+    background: #4CAF50;
+    color: white;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background: #45a049;
+}
+
+/* Botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+
+
+/* Fondo del modal */
+#login-btn {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 8px 16px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#login-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#login-btn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    color: black;
+}
+
+.login-content h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.login-content label {
+    display: block;
+    margin-top: 10px;
+}
+
+.login-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-content button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #f1bf1b;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-content button:hover {
+    background-color: #d9a90f;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.li-fragancias {
+    position: relative;
+    list-style: none;
+}
+
+.li-fragancias a {
+    display: block;
+    text-decoration: none;
+    color: gray;
+    /* Para que combine con tu navbar oscura */
+    padding: 10px 12px;
+}
+
+.submenu1 {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: transparent;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: transparent;
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 100;
+}
+
+.submenu1 li a {
+    padding: 8px 12px;
+    display: block;
+    color: gray;
+    font-size: 1rem;
+}
+
+.submenu1 li a:hover {
+    background: #f0f0f0;
+    color: #252424 !important;
+}
+
+/* Mostrar al pasar el mouse */
+.li-fragancias:hover .submenu1 {
+    display: block !important;
+    background: #f0f0f0;
+    color: #252424 !important;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Header and Nav */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.nav-right ul {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nav-right ul li a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.nav-right ul li a:hover {
+    color: #f1bf1b;
+}
+
+.menu #btn_menu {
+    display: none;
+}
+
+.nav-right img {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.nav-right img:hover {
+    transform: scale(1.1);
+}
+
+.logo .img-logo {
+    height: 110px;
+    width: auto;
+
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    margin-top: calc(-1 * var(--header-total-height));
+}
+
+.banner1 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Info Bar */
+.info {
+    background-color: #525252;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+footer .container-footer {
+    color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+footer .container-footer nav li a {
+    margin-left: 30px;
+    color: #ffffff;
+}
+
+footer {
+    color: #ffffff;
+}
+
+footer .container-footer img {
+    width: 40px;
+    height: 20px;
+    object-fit: contain;
+    align-items: flex-start;
+    margin-top: 5px !important;
+}
+
+footer .container-footer>span {
+    margin-right: auto;
+}
+
+.pie-pages {
+    display: flex;
+    gap: 500px;
+    justify-content: center;
+    background-color: #525252;
+
+}
+
+.pie-pages li {
+    list-style-type: none;
+    color: white;
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+
+/* ---------------------- RESPONSIVE DESIGN ---------------------- */
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+    }
+
+    /* Reduce tamaño del logo */
+    .logo .img-logo {
+        height: 70px;
+    }
+
+    /* Ajustes de la barra de navegación */
+    .nav-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        background-color: #252424;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        align-items: center;
+    }
+
+    .nav-right ul li {
+        margin: 0;
+    }
+
+    .nav-right img {
+        width: 28px;
+        height: 28px;
+    }
+
+    nav li {
+        margin-right: 10px;
+    }
+
+    /* Marquee en dispositivos pequeños */
+    .info {
+        font-size: 0.8rem;
+        padding: 0.25rem 0;
+    }
+
+    /* Banner responsivo */
+    .banner1 {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Footer en columna */
+    .pie-pages {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .footer .container-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .footer .container-footer img {
+        margin: 5px auto;
+    }
+
+    footer .container-footer nav li a {
+        margin-left: 0;
+        font-size: 10px;
+    }
+
+}
+
+/* ---------------------- RESPONSIVE DESIGN ---------------------- */
+@media (max-width: 768px) {
+    .logo .img-logo {
+        display: none;
+    }
+
+    .menu nav {
+        position: fixed;
+        top: 0;
+        right: -150px;
+        background: transparent;
+        width: 250px;
+        height: 90px;
+        padding: 0 50px 50px 0;
+        z-index: 1;
+        transition: all 300ms;
+        align-items: flex-start
+    }
+
+    .menu ul {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .menu ul li {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    #selected {
+        background: none;
+        padding: 0px;
+        border-radius: none;
+        color: #979797;
+    }
+
+    .menu nav img {
+        display: block;
+        width: 60px;
+    }
+
+    #back_menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90px;
+        background: rgba(255, 255, 255, 0.);
+        display: none;
+    }
+
+    .menu #btn_menu {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 24px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 300ms;
+    }
+
+    .menu #btn_menu:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .aroma-box span {
+        display: none;
+    }
+}

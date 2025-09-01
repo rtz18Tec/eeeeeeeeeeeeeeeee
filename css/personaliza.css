@@ -1,0 +1,76 @@
+.packs-container {
+    margin: 250px auto;
+    /* Adjust margin for overall content */
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #ffffff;
+    padding: 40px 20px;
+    /* Responsive padding */
+    max-width: 90%;
+    /* Max width for content */
+    border-radius: 10px;
+    /* Rounded corners for main content */
+    width: 800px;
+}
+
+body {
+    background-color: black;
+
+}
+
+.estrella {
+    display: flex;
+    justify-content: center;
+}
+
+.estrella1 {
+    width: 100px !important;
+    height:
+        100px !important;
+}
+
+#tit {
+    color: #ffffff;
+    border-top: 2px solid rgb(241, 191, 27);
+    border-bottom: 2px solid rgb(241, 191, 27);
+    padding: 10px 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+h3 {
+    font-size: clamp(18px, 4vw, 28px);
+    /* Responsive font size for H3 */
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: clamp(14px, 3vw, 18px);
+    /* Responsive font size for paragraph */
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-size: 1.8rem;
+}
+
+a button {
+    background-color: #1da851;
+    padding: 15px 50px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+a button:hover {
+    background-color: seagreen;
+
+}
+
+.redes {
+    display: flex;
+    text-align: center;
+}

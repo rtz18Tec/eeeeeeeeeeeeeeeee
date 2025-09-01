@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/nav-footer.css">
+    <link rel="stylesheet" href="../css/nosotros.css">
+    <link rel="stylesheet" href="../css/shoppingCart.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <nav class="flex justify-between items-center px-4 md:px-8" id="nav">
+                <div class="logo">
+                    <a href="../index.html"><img class="img-logo rounded-md" src="../images/logo.webp" alt="Logo"></a>
+                </div>
+                <!-- BOTÓN HAMBURGUESA SOLO EN MOBILE -->
+
+                <i class="fas fa-bars" style="font-size:48px; color:rgb(255, 255, 255);" id="btn_menu"></i>
+                <div id="back_menu"></div>
+                <div class="nav-right flex items-center gap-4">
+                    <ul class="hidden md:flex">
+                        <!-- barra de busqueda -->
+                        <li>
+                            <div id="container" class="rounded-md">
+                                <input type="text" placeholder="Buscar" id="inputSearch">
+                                <div class="btn">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><a href="personaliza.html" class="rounded-md p-2">PERSONALIZA</a></li>
+                        <li><a href="https://wa.me/51921726650 " class="rounded-md p-2">CONSULTAS</a></li>
+                        <li><a href="productos.html" class="rounded-md p-2">PRODUCTOS</a></li>
+                        <button id="register-btn" class="menu-btn register">REGÍSTRATE</button>
+                        <button id="login-btn" class="rounded-md p-2"
+                            style="margin-left: 10px; background: transparent; color: white; display: flex; align-items: center;">
+                            <img src="../images/person.webp" alt="Usuario" class="rounded-md" id="user-img"
+                                style="width: 24px; height: 24px; object-fit: cover;">
+                            <span id="user-name" style="margin-left: 10px;"></span>
+                        </button>
+                        <button style="background-color: transparent;" id="cart-icon" class="cart-icon"><img
+                                src="../images/shopping_cart.webp" alt="Carrito" class="rounded-md"> <span id="cart-count"
+                                class="cart-count" style="color: white;">0</span></button>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article class="nosotros">
+            
+            <h1>¿Quiénes somos?</h1>
+            <br>
+            <p>
+                Alquimia Estelar nace el 5 de marzo de 2025 como una propuesta espiritual que une lo artesanal, lo
+                energético y lo intuitivo. Es una tienda mística en evolución, creada por almas que han decidido
+                emprender un camino de independencia, conexión y propósito, creando productos que acompañan a otros en
+                su propio viaje interior.</p>
+            <br>
+            <p>
+                En Alquimia Estelar, Cada creación y cada artículo que ofrecemos —elaborado o seleccionado— nace desde
+                el respeto, el amor y la mejor intención energética. Trabajamos con conciencia y seguimos profundizando
+                nuestro camino espiritual para ofrecer siempre lo más auténtico y significativo.</p>
+            <h2>Misión</h2>
+            <br>
+            <p>
+                Ofrecer productos espirituales y artesanales que acompañen a las personas en sus procesos de sanación,
+                conexión interior y armonía personal. En Alquimia Estelar, cada producto es creado o elegido con
+                conciencia, intención y respeto, como un canal para materializar lo que nace en los pensamientos y en el
+                deseo profundo del alma de quien lo necesita. Lo que sueñas, intuyes o anhelas, nosotros lo traemos del
+                cielo a tus manos.</p>
+            <h2>Visión</h2>
+            <br>
+            <p>
+                Consolidar a Alquimia Estelar como una tienda espiritual reconocida por su autenticidad, propósito y
+                compromiso con el bienestar. Aspiramos a un crecimiento consciente y en equilibrio, expandiendo nuestra
+                presencia con productos que honren la energía, la belleza y la intención. Nuestra prioridad es mantener
+                la calidad, la conexión genuina y una prosperidad armoniosa que nos permita seguir creando, sanando y
+                evolucionando junto a quienes confían en nosotros.</p>
+        </article>
+        <!-- Modal de Registro -->
+        <div class="modal" id="register-modal">
+            <form id="register-form">
+                <h2>Crear Cuenta</h2>
+
+                <label>Nombre</label>
+                <input type="text" id="register-name" required minlength="3">
+
+                <label>Correo</label>
+                <input type="email" id="register-email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+                <label>Contraseña</label>
+                <input type="password" id="register-password" required minlength="8"
+                    pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}"
+                    title="Debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo">
+
+                <button type="submit">Registrarse</button>
+                <span id="close-register" class="close-btn">&times;</span>
+            </form>
+        </div>
+
+        <!-- Modal de Login -->
+        <div id="login-modal" class="login-modal">
+            <div class="login-content">
+                <span id="close-login" class="close">&times;</span>
+                <form id="login-form">
+                    <label for="login-email">Correo:</label>
+                    <input type="email" id="login-email" required>
+
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" required>
+
+                    <button type="submit">Ingresar</button>
+                </form>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Tu Carrito</h2>
+                <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+            </div>
+            <ul id="cart-items" class="cart-items">
+                <!-- Los elementos del carrito se añadirán -->
+            </ul>
+            <div class="cart-summary">
+                <p>Total: s/<span id="cart-total">0.00</span></p>
+                <a><button id="checkout-btn" class="checkout-btn">Comprar por WhatsApp</button></a>
+            </div>
+        </div>
+    </main>
+<footer>
+        <div class="pie-pages">
+            <div class="container-footer">
+                <h4 style="color: white;">Recuerdos</h4>
+                <p style="color: white;">Momentos espaciales con velas y jabones únicos</p>
+                <a href="https://www.instagram.com/alquimiaestelarperu/profilecard/?igsh=MXg1cmcyNWgybGR3MA%3D%3D">
+                    <img src="../images/ig.webp" width="100px" height="60px" style="margin-top: 10px;"
+                        alt="Icono de Instagram">
+                </a>
+
+                <a href="https://web.facebook.com/people/Alquimia-Estelar/61573783214190/">
+                    <img src="../images/facebook.webp" style="margin-top: 10px;" alt="Icono de Facebook">
+                </a>
+
+                <a href="https://www.linkedin.com/in/alquimia-estelar-peru-a3a7a4306">
+                    <img src="../images/lin.webp" style="margin-top: 10px;" alt="Icono de linkedin">
+                </a>
+                <span style="color: white;">© Alquimia Estelar</span>
+
+
+            </div>
+            <div class="container-footer">
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../scrip/botonWhatsApp.js"></script>
+<script src="../scrip/shoppingCart.js"></script>
+<script src="../scrip/programa.js"></script>
+<script src="../scrip/menu.js"></script>
+<script src="../scrip/user.js"></script>
+
+</html>

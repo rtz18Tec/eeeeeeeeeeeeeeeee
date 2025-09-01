@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/nav-footer.css">
+    <link rel="stylesheet" href="../../css/dulzuraDeCerezo.css">
+    <link rel="stylesheet" href="../../css/home.css">
+    <link rel="stylesheet" href="../../css/shoppingCart.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="../../css/search.css">
+
+</head>
+
+<body>
+    <header>
+        <marquee behavior="scroll" direction="left" class="info">ENVIOS A TODO EL PERU<strong></strong></marquee>
+        <div class="menu">
+            <nav class="flex justify-between items-center px-4 md:px-8" id="nav">
+                <div class="logo">
+                    <a href="../../index.html"><img class="img-logo rounded-md" src="../../images/logo.webp"
+                            alt="Logo"></a>
+                </div>
+                <!-- BOTÓN HAMBURGUESA SOLO EN MOBILE -->
+                <i class="fas fa-bars" style="font-size:48px; color:rgb(255, 255, 255);" id="btn_menu"></i>
+                <div id="back_menu"></div>
+                <div class="nav-right flex items-center gap-4">
+                    <ul class="hidden md:flex">
+                        <!-- barra de busqueda -->
+                        <li>
+                            <div id="container" class="rounded-md">
+                                <input type="text" placeholder="Buscar" id="inputSearch-uno">
+                                <div class="btn">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="../personaliza.html" class="rounded-md p-2">PERSONALIZA</a></li>
+                        <li><a href="https://wa.me/51921726650 " class="rounded-md p-2">CONSULTAS</a></li>
+                        <li><a href="../productos.html" class="rounded-md p-2">PRODUCTOS</a></li>
+                        <button id="register-btn" class="menu-btn register">REGÍSTRATE</button>
+                        <button id="login-btn" class="rounded-md p-2"
+                            style="margin-left: 10px; background: transparent; color: white; display: flex; align-items: center;">
+                            <img src="../../images/person.webp" alt="Usuario" class="rounded-md" id="user-img"
+                                style="width: 24px; height: 24px; object-fit: cover;">
+                            <span id="user-name" style="margin-left: 10px;"></span>
+                        </button>
+                        <button style="background-color: transparent;" id="cart-icon" class="cart-icon"><img
+                                src="../../images/shopping_cart.webp" alt="Carrito" class="rounded-md"> <span
+                                id="cart-count" class="cart-count" style="color: white;">0</span></button>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <div class="box-producto">
+            <div>
+                <img style="width: 580px;" src="../../images/Incienso.webp" alt="">
+            </div>
+            <div class="product-info">
+                <h1>Incienso Cono Natural</h1>
+
+                <p>S/ <span class="product-price">10.00</span></p>
+                <p> Incienso artesanal en forma de cono, elaborado a mano con ingredientes naturales. Ideal para
+                    rituales de limpieza, meditación o aromatización de espacios.
+                    <br>
+                    Contenido: pack de 12 conos
+                    <br>
+                    Duración por cono: 15 a 20 minutos aprox.
+                </p>
+                <button class="add-to-cart-btn" data-name="Incienso Cono Natural" data-price="10.00">AGREGAR AL
+                    CARRITO</button>
+            </div>
+        </div>
+
+        <div class="produc-tools" id="center-title">
+            <h2>Productos Relaciaonados</h2>
+            <div id="center-produc-box" class="produc-box">
+
+                <a href="dulzuraDeCerezo.html">
+                    <div class="center">
+                        <img src="../../images/aromatizadores.webp" alt="Dulzura de Cerezo">
+                        <h4>Dulzura de Cerezo </h4>
+                        <span>S/ 5.00</span>
+                    </div>
+                </a>
+
+                <a href="tulipan.html">
+                    <div class="center">
+                        <img src="../../images/1tulipan.webp" alt="Tulipan">
+                        <h4>Tulipan </h4>
+                        <span>S/ 5.00</span>
+                    </div>
+                </a>
+
+                <a href="velaRosa.html">
+                    <div class="center">
+                        <img src="../../images/ros.webp" alt="Vela Rosa">
+                        <h4>Vela Rosa</h4>
+                        <span>S/ 6.00</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- Modal de Login -->
+    <div id="login-modal" class="login-modal">
+        <div class="login-content">
+            <span id="close-login" class="close">&times;</span>
+            <form id="login-form">
+                <label for="login-email">Correo:</label>
+                <input type="email" id="login-email" required>
+
+                <label for="login-password">Contraseña:</label>
+                <input type="password" id="login-password" required>
+
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Carrito de Compras -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+        </div>
+        <ul id="cart-items" class="cart-items">
+            <!-- Los elementos del carrito se añadirán -->
+        </ul>
+        <div class="cart-summary">
+            <p>Total: s/<span id="cart-total">0.00</span></p>
+            <a><button id="checkout-btn" class="checkout-btn">Comprar por WhatsApp</button></a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="pie-pages">
+            <div class="container-footer">
+                <h4 style="color: white;">Recuerdos</h4>
+                <p style="color: white;">Momentos espaciales con velas y jabones únicos</p>
+                <a href="https://www.instagram.com/alquimiaestelarperu/profilecard/?igsh=MXg1cmcyNWgybGR3MA%3D%3D">
+                    <img src="../../images/ig.webp" width="100px" height="60px" style="margin-top: 10px;"
+                        alt="Icono de Instagram">
+                </a>
+
+                <a href="https://web.facebook.com/people/Alquimia-Estelar/61573783214190/">
+                    <img src="../../images/facebook.webp" style="margin-top: 10px;" alt="Icono de Facebook">
+                </a>
+
+                <a href="https://www.linkedin.com/in/alquimia-estelar-peru-a3a7a4306">
+                    <img src="../../images/lin.webp" style="margin-top: 10px;" alt="Icono de linkedin">
+                </a>
+                <span style="color: white;">© Alquimia Estelar</span>
+            </div>
+            <div class="container-footer">
+                <ul>
+                    <li><a href="../nosotros.html">Nosotros</a></li>
+                    <li><a href="../contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../../scrip/botonWhatsApp.js"></script>
+<script src="../../scrip/shoppingCart.js"></script>
+<script src="../../scrip/menu.js"></script>
+<script src="../../scrip/user.js"></script>
+<script src="../../scrip/lupa.js"></script>
+</html>

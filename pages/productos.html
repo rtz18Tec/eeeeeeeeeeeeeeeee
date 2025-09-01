@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/nav-footer.css">
+    <link rel="stylesheet" href="../css/productos.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/shoppingCart.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="menu">
+            <nav class="flex justify-between items-center px-4 md:px-8" id="nav">
+                <div class="logo">
+                    <a href="../index.html"><img class="img-logo rounded-md" src="../images/logo.webp" alt="Logo"></a>
+                </div>
+                <!-- BOTÓN HAMBURGUESA SOLO EN MOBILE -->
+
+                <i class="fas fa-bars" style="font-size:48px; color:rgb(255, 255, 255);" id="btn_menu"></i>
+                <div id="back_menu"></div>
+                <div class="nav-right flex items-center gap-4">
+                    <ul class="hidden md:flex">
+                        <!-- barra de busqueda -->
+                        <li>
+                            <div id="container" class="rounded-md">
+                                <input type="text" placeholder="Buscar" id="inputSearch">
+                                <div class="btn">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><a href="personaliza.html" class="rounded-md p-2">PERSONALIZA</a></li>
+                        <li><a href="https://wa.me/51921726650 " class="rounded-md p-2">CONSULTAS</a></li>
+                        <li><a href="productos.html" class="rounded-md p-2">PRODUCTOS</a></li>
+                        <button id="register-btn" class="menu-btn register">REGÍSTRATE</button>
+                        <button style="margin-left: 8px;" id="login-btn" class="rounded-md p-2"
+                            style="background: transparent; color: white;">
+                            <img src="../images/person.webp" alt="Usuario" class="rounded-md" id="user-img">
+                            <span id="user-name" style="margin-left: 8px;"></span>
+                        </button>
+                        <button style="background-color: transparent;" id="cart-icon" class="cart-icon"><img
+                                src="../images/shopping_cart.webp" alt="Carrito" class="rounded-md"> <span id="cart-count"
+                                class="cart-count" style="color: white;">0</span></button>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="estr">
+            <img src="../images/estre.webp" alt="estrellas" class="estr1">
+            <h1>PRODUCTOS</h1>
+            <img src="../images/estre.webp" alt="estrellas" class="estr1">
+        </div>
+        <!--Aromatizadores-->
+        <div class="produc-tools">
+            <h2 id="ir_aromatizadores">Aromatizadores</h2>
+            <h3>Colección Cera de Soja</h3>
+            <div class="produc-box">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="productos/dulzuraDeCerezo.html">
+                                    <div class="center">
+                                        <img src="../images/aromatizadores.webp" alt="Dulzura de Cerezo">
+                                        <h4>Dulzura de Cerezo </h4>
+                                        <span>S/ 5.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="productos/rosaEspiral.html">
+                                    <div class="center">
+                                        <img src="../images/rosaEspiral.webp" alt="Rosa Espiral">
+                                        <h4>Rosa Espiral</h4>
+                                        <span>S/ 5.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                            <!--Velas Naturales
+                                <th>
+                                    <a href="/pages/productos/inciensoCono.html">
+                                        <div class="center">
+                                            <img src="/images/Incienso.webp" alt="Incienso Cono Natural">
+                                            <h4>Incienso Cono Natural </h4>
+                                            <span>S/ 10.00</span>
+                                        </div>
+                                    </a>
+                                </th>
+                                -->
+                            <th> </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!--Velas Naturales-->
+        <div class="produc-tools">
+            <h2 id="ir_velasDecorativas">Velas Naturales</h2>
+            <h3>Colección Jardín</h3>
+            <div class="produc-box">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="productos/tulipan.html">
+                                    <div class="center">
+                                        <img src="../images/1tulipan.webp" alt="Tulipan">
+                                        <h4>Tulipan </h4>
+                                        <span>S/ 5.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="productos/ramoTulipan.html">
+                                    <div class="center">
+                                        <img src="../images/ramoTulipanRosa.webp" alt="Ramo Tulipan">
+                                        <h4>Ramo Tulipan</h4>
+                                        <span>S/ 20.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="productos/florHibisco.html">
+                                    <div class="center">
+                                        <img src="../images/florHibisco.webp" alt="Flor de Hibisco">
+                                        <h4>Flor de Hibisco</h4>
+                                        <span>S/ 10.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                    </thead>
+                    <tbody>
+                        <th>
+                            <a href="productos/velaRosa.html">
+                                <div class="center">
+                                    <img src="../images/ros.webp" alt="Vela Rosa">
+                                    <h4>Vela Rosa</h4>
+                                    <span>S/ 6.00</span>
+                                </div>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="productos/cactusSimple.html">
+                                <div class="center">
+                                    <img src="../images/cactusSimple.webp" alt="Cactus Simple">
+                                    <h4>Cactus Simple</h4>
+                                    <span>S/ 7.00</span>
+                                </div>
+                            </a>
+                        </th>
+                        <th>
+                            <a href="productos/cactusHawaiano.html">
+                                <div class="center">
+                                    <img src="../images/cactusHawaiano.webp" alt="Cactus Hawaiano">
+                                    <h4>Cactus Hawaiano</h4>
+                                    <span>S/ 11.00</span>
+                                </div>
+                            </a>
+                        </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--Colección PET LOVERS-->
+        <div class="produc-tools">
+            <h3>Colección PET LOVERS</h3>
+            <div class="produc-box">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="productos/velaOsitos.html">
+                                    <div class="center">
+                                        <img src="../images/velaOso.webp" alt="Vela Osito">
+                                        <h4>Vela Osito</h4>
+                                        <span>S/ 15.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="productos/velaGato.html">
+                                    <div class="center">
+                                        <img src="../images/gato.webp" alt="Vela Ángel Gatuno">
+                                        <h4>Vela Ángel Gatuno</h4>
+                                        <span>S/ 20.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="productos/huellitas.html">
+                                    <div class="center">
+                                        <img src="../images/huelllas.webp" alt="Pack de Velitas">
+                                        <h4>Huellitas</h4>
+                                        <span>S/ 5.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                    <tbody>
+                        <th>
+                            <a href="productos/packvelas.html">
+                                <div class="center">
+                                    <img src="../images/perro.webp" alt="Pack de Velitas">
+                                    <h4>Pack de velitas</h4>
+                                    <span>S/ 9.00</span>
+                                </div>
+                            </a>
+                        </th>
+                    </tbody>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!--Colección Divina-->
+        <div class="produc-tools">
+            <h3>Colección Divina</h3>
+            <div class="produc-box">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="productos/angel.html">
+                                    <div class="center">
+                                        <img src="../images/velaAngelito.webp" alt="Vela Angelito">
+                                        <h4>Vela Angelito</h4>
+                                        <span>S/ 12.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="productos/coraAngel.html">
+                                    <div class="center">
+                                        <img src="../images/Angel.webp" alt="Vela Angelito">
+                                        <h4>Vela Angelito</h4>
+                                        <span>S/ 12.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!--Colección AromaBotanica-->
+        <div class="produc-tools">
+            <h3>Colección AromaBotanica</h3>
+            <div class="produc-box">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="productos/jardinPote.html">
+                                    <div class="center">
+                                        <img src="../images/jardinPote.webp" alt="Jardín en Pote">
+                                        <h4>Jardín en Pote</h4>
+                                        <span>S/ 11.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!--Colección Marina-->
+        <div class="produc-tools">
+            <h3>Colección Marina</h3>
+            <div class="produc-box">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="productos/velaSirena.html">
+                                    <div class="center">
+                                        <img src="../images/velaSirena.jpg" alt="Vela Sirena">
+                                        <h4>Vela Sirena</h4>
+                                        <span>S/ 7.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <!--CUIDADO PERSONAL-->
+        <div class="produc-tools">
+            <h2 id="ir_cuidadoPersonal">CUIDADO PERSONAL</h2>
+            <h3>Colección Jabones Artesanales</h3>
+            <div class="produc-box">
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="productos/jabonCorporal.html">
+                                    <div class="center">
+                                        <img src="../images/jabones.webp" alt="Jabon Corporal">
+                                        <h4>Jabon Corporal</h4>
+                                        <span>S/ 3.00</span>
+                                    </div>
+                                </a>
+
+                            </th>
+                            <th>
+                                <a href="productos/miniCorazon.html">
+                                    <div class="center">
+                                        <img src="../images/jCora.webp" alt="Mini Corazoncitos">
+                                        <h4>Mini Corazoncitos</h4>
+                                        <span>S/ 2.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal de Registro -->
+        <div class="modal" id="register-modal">
+            <form id="register-form">
+                <h2>Crear Cuenta</h2>
+
+                <label>Nombre</label>
+                <input type="text" id="register-name" required minlength="3">
+
+                <label>Correo</label>
+                <input type="email" id="register-email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+                <label>Contraseña</label>
+                <input type="password" id="register-password" required minlength="8"
+                    pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}"
+                    title="Debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo">
+
+                <button type="submit">Registrarse</button>
+                <span id="close-register" class="close-btn">&times;</span>
+            </form>
+        </div>
+
+        <!-- Modal de Login -->
+        <div id="login-modal" class="login-modal">
+            <div class="login-content">
+                <span id="close-login" class="close">&times;</span>
+                <form id="login-form">
+                    <label for="login-email">Correo:</label>
+                    <input type="email" id="login-email" required>
+
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" required>
+
+                    <button type="submit">Ingresar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Carrito de Compras -->
+        <div id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Tu Carrito</h2>
+                <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+            </div>
+            <ul id="cart-items" class="cart-items">
+                <!-- Los elementos del carrito se añadirán -->
+            </ul>
+            <div class="cart-summary">
+                <p>Total: s/<span id="cart-total">0.00</span></p>
+                <a><button id="checkout-btn" class="checkout-btn">Comprar por WhatsApp</button></a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="pie-pages">
+            <div class="container-footer">
+                <h4 style="color: white;">Recuerdos</h4>
+                <p style="color: white;">Momentos espaciales con velas y jabones únicos</p>
+                <a href="https://www.instagram.com/alquimiaestelarperu/profilecard/?igsh=MXg1cmcyNWgybGR3MA%3D%3D">
+                    <img src="../images/ig.webp" width="100px" height="60px" style="margin-top: 10px;"
+                        alt="Icono de Instagram">
+                </a>
+
+                <a href="https://web.facebook.com/people/Alquimia-Estelar/61573783214190/">
+                    <img src="../images/facebook.webp" style="margin-top: 10px;" alt="Icono de Facebook">
+                </a>
+
+                <a href="https://www.linkedin.com/in/alquimia-estelar-peru-a3a7a4306">
+                    <img src="../images/lin.webp" style="margin-top: 10px;" alt="Icono de linkedin">
+                </a>
+                <span style="color: white;">© Alquimia Estelar</span>
+
+
+            </div>
+            <div class="container-footer">
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../scrip/botonWhatsApp.js"></script>
+<script src="../scrip/shoppingCart.js"></script>
+<script src="../scrip/programa.js"></script>
+<script src="../scrip/menu.js"></script>
+<script src="../scrip/user.js"></script>
+<script src="../scrip/lupa2.js"></script>
+</html>

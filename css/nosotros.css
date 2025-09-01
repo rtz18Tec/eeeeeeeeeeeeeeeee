@@ -1,0 +1,44 @@
+.nosotros h1,
+h2 {
+    color: #ffffff;
+    border-bottom: 2px solid rgb(241, 191, 27);
+    font-size: 30px;
+    padding: 5px 10px;
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    margin-left: 590px;
+}
+
+.nosotros p {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.nosotros {
+    margin-top: 250px;
+}
+
+p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1em auto;
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 14px;
+        padding: 0 1em;
+    }
+
+    .nosotros {
+        margin-top: 30px;
+    }
+
+    .nosotros h1,
+    h2 {
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquimia Estelar</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/nav-footer.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <style>
+        body {
+            background-color: black;
+            max-width: 100%;
+            background-image: url('images/foondoo.webp');
+            background-repeat: repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+    <header>
+        <marquee behavior="scroll" direction="left" class="info">
+            ENVIOS A TODO EL PERU<strong></strong>
+        </marquee>
+
+        <div class="menu">
+            <nav class="flex justify-between items-center px-4 md:px-8" id="nav">
+                <div class="logo">
+                    <a href="index.html"><img class="img-logo rounded-md" src="images/logo.webp" alt="Logo"></a>
+                </div>
+                <!-- BOTÓN HAMBURGUESA SOLO EN MOBILE -->
+
+                <i class="fas fa-bars" style="font-size:48px; color:rgb(255, 255, 255);" id="btn_menu"></i>
+                <div id="back_menu"></div>
+                <div class="nav-right flex items-center gap-4">
+                    <ul class="hidden md:flex">
+                        <!-- barra de busqueda -->
+                        <li>
+                            <div id="container" class="rounded-md">
+                                <input type="text" placeholder="Buscar" id="inputSearch">
+                                <div class="btn" id="btnSearch">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><a href="pages/personaliza.html" class="rounded-md p-2">PERSONALIZA</a></li>
+                        <li><a href="https://wa.me/51921726650 " class="rounded-md p-2">CONSULTAS</a></li>
+                        <li><a href="pages/productos.html" class="rounded-md p-2">PRODUCTOS</a></li>
+                        <button id="register-btn" class="menu-btn register">REGÍSTRATE</button>
+                        <button id="login-btn" class="rounded-md p-2"
+                            style="margin-left: 10px; background: transparent; color: white; display: flex; align-items: center;">
+                            <img src="images/person.webp" alt="Usuario" class="rounded-md" id="user-img"
+                                style="width: 24px; height: 24px; object-fit: cover;">
+                            <span id="user-name" style="margin-left: 10px;"></span>
+                        </button>
+                        <button style="background-color: transparent;" id="cart-icon" class="cart-icon"><img
+                                src="images/shopping_cart.webp" alt="Carrito" class="rounded-md"> <span id="cart-count"
+                                class="cart-count" style="color: white;">0</span></button>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="banner">
+            <img id="ban" src="images/baan1.jpg" alt="banner" class="banner1">
+        </div>
+        <div class="produc-tools">
+            <div class="estrella">
+                <h2>Novedades</h2>
+                <img src="images/estre.webp" alt="estrellas" class="estrella1">
+            </div>
+
+            <div class="produc-box">
+
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="pages/productos/jardinPote.html">
+                                    <div class="center">
+                                        <img src="images/jardinPote.webp" alt="Jardín en Pote">
+                                        <h4>Jardín en Pote</h4>
+                                        <span>S/ 11.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="pages/productos/packvelas.html">
+                                    <div class="center">
+                                        <img src="images/perro.webp" alt="Cuidado Personal">
+                                        <h4>Pack de Velitas</h4>
+                                        <span>S/ 0.00</span>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="pages/productos/velaGato.html">
+                                    <div class="center">
+                                        <img src="images/gato.webp" alt="Vela Ángel Gatuno">
+                                        <h4>Vela Ángel Gatuno</h4>
+                                        <span>S/ 20.00</span>
+                                    </div>
+                                </a>
+                            </th>
+
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <div class="produc-tools">
+            <div class="estrella">
+                <img src="images/estre.webp" alt="estrellas" class="estrella1">
+                <h2>Productos Artesanales</h2>
+            </div>
+
+            <div class="produc-box">
+
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <a href="pages/productos.html#ir_aromatizadores">
+                                    <div class="center">
+                                        <img src="images/aromatizadores.webp" alt="aromatizadores">
+                                        <h4>Artomalizadores</h4>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="pages/productos.html#ir_velasDecorativas">
+                                    <div class="center">
+                                        <img src="images/florHibisco.webp" alt="Cuidado Personal">
+                                        <h4>Velas Decorativas</h4>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <a href="pages/productos.html#ir_cuidadoPersonal">
+                                    <div class="center">
+                                        <img src="images/jabones.webp" alt="Cuidado Personal">
+                                        <h4>Cuidado Personal</h4>
+                                    </div>
+                                </a>
+                            </th>
+
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <div class="aromas-tools">
+            <h2>Explora Nuestros Aromas</h2>
+            <div class="aroma-box">
+
+                <table id="tabla">
+                    <thead>
+                        <tr>
+                            <th>
+                                <span><img src="images/brillos.webp" id="bri"></span>
+                            </th>
+                            <th>
+                                <!-- Aroma Cítrico -->
+                                <a href="pages/fragancias.html">
+                                    <div class="center">
+                                        <img src="images/citrico.webp" class="aroma-circle" alt="Aroma Cítrico">
+                                        <h5 class="aroma-name">CÍTRICO</h5>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <!-- Aroma Canela -->
+                                <a href="pages/fragancias.html">
+                                    <div class="center">
+                                        <img src="images/canela.webp" class="aroma-circle" alt="Aroma Canela">
+                                        <h5 class="aroma-name">CANELA</h5>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <!-- Aroma Lavanda -->
+                                <a href="pages/fragancias.html">
+                                    <div class="center">
+                                        <img src="images/lavanda.webp" class="aroma-circle" alt="Aroma Lavanda">
+                                        <h5 class="aroma-name">LAVANDA</h5>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <!-- Aroma Eucalipto -->
+                                <a href="pages/fragancias.html">
+                                    <div class="center">
+                                        <img src="images/eucalipto.webp" class="aroma-circle" alt="Aroma Eucalipto">
+                                        <h5 class="aroma-name">EUCALIPTO</h5>
+                                    </div>
+                                </a>
+                            </th>
+                            <th>
+                                <img src="images/brillos-iz.webp.png" id="bri">
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
+        </div>
+
+
+        <!-- Modal de Registro -->
+        <div class="modal" id="register-modal">
+            <form id="register-form">
+                <h2>Crear Cuenta</h2>
+
+                <label>Nombre</label>
+                <input type="text" id="register-name" required minlength="3">
+
+                <label>Correo</label>
+                <input type="email" id="register-email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+                <label>Contraseña</label>
+                <input type="password" id="register-password" required minlength="8"
+                    pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}"
+                    title="Debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo">
+
+                <button type="submit">Registrarse</button>
+                <span id="close-register" class="close-btn">&times;</span>
+            </form>
+        </div>
+
+        <!-- Modal de Login -->
+        <div id="login-modal" class="login-modal">
+            <div class="login-content">
+                <span id="close-login" class="close">&times;</span>
+                <form id="login-form">
+                    <label for="login-email">Correo:</label>
+                    <input type="email" id="login-email" required>
+
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" required>
+
+                    <button type="submit">Ingresar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Carrito de Compras -->
+        <div id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Tu Carrito</h2>
+                <button id="close-cart-btn" class="close-cart-btn">&times;</button>
+            </div>
+            <ul id="cart-items" class="cart-items">
+                <!-- Los elementos del carrito se añadirán -->
+            </ul>
+            <div class="cart-summary">
+                <p>Total: s/<span id="cart-total">0.00</span></p>
+                <a><button id="checkout-btn" class="checkout-btn">Comprar por WhatsApp</button></a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="pie-pages">
+            <div class="container-footer">
+                <h4 style="color: white;">Recuerdos</h4>
+                <p style="color: white;">Momentos espaciales con velas y jabones únicos</p>
+                <a href="https://www.instagram.com/alquimiaestelarperu/profilecard/?igsh=MXg1cmcyNWgybGR3MA%3D%3D">
+                    <img src="images/ig.webp" width="100px" height="60px" style="margin-top: 10px;"
+                        alt="Icono de Instagram">
+                </a>
+
+                <a href="https://web.facebook.com/people/Alquimia-Estelar/61573783214190/">
+                    <img src="images/facebook.webp" style="margin-top: 10px;" alt="Icono de Facebook">
+                </a>
+
+                <a href="https://www.linkedin.com/in/alquimia-estelar-peru-a3a7a4306">
+                    <img src="images/lin.webp" style="margin-top: 10px;" alt="Icono de linkedin">
+                </a>
+                <span style="color: white;">© Alquimia Estelar</span>
+
+
+            </div>
+            <div class="container-footer">
+                <ul>
+                    <li><a href="pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="scrip/botonWhatsApp.js"></script>
+<script src="scrip/shoppingCart.js"></script>
+<script src="scrip/programa.js"></script>
+<script src="scrip/menu.js"></script>
+<script src="scrip/user.js"></script>
+</html>

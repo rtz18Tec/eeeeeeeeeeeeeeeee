@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    position: relative;
+    padding: 10px;
+}
+
+input {
+    outline: none;
+    box-sizing: border-box;
+    height: 60px;
+    width: 350px;
+    /* ahora siempre expandido */
+    padding: 0 20px;
+    color: #000;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 1px solid black;
+    transition: all .3s ease;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    line-height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn i {
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    line-height: 80px;
+}
+
+
+@media (max-width: 792px) {
+    #container {
+        padding: 5px;
+        width: 100%;
+        border-color: white;
+    }
+
+    input {
+        height: 45px;
+        width: 100% !important;
+        font-size: 16px;
+        padding: 0 16px;
+        border-color: rgb(255, 255, 255);
+    }
+
+    .btn {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        top: 0;
+        right: 0;
+    }
+
+    .btn i {
+        font-size: 20px;
+        line-height: 45px;
+    }
+}
